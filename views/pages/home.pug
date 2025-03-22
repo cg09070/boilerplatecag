@@ -1,0 +1,9 @@
+extends ../template
+
+block variables
+	- var template = 'home'
+
+block content
+	.home(data-background=(Prismic.isFilled.color(home.data.bgcolor) ? home.data.bgcolor : bgcolor))
+		.home_wrapper
+			.home_title=home.data.text

@@ -1,0 +1,52 @@
+@use '../base/reset';
+
+@use '../../node_modules/include-media/dist/include-media' as im;
+
+@use '../utils/responsive' as r;
+@use '../utils/variables' as v;
+@use '../utils/mixins';
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+html {
+	@extend %cover;
+	
+	background: v.$color-contessa;
+	color: v.$color-white;
+	font-size: calc(100vw / 1920px * 10px);
+	line-height: 1;
+	position: fixed;
+	
+	@include im.media('<=phone') {
+		font-size: calc(100vw / 750px * 10px);
+	}
+}
+
+body {
+	@extend %cover;
+	
+	position: fixed;
+}
+
+a {
+	color: inherit;
+	outline: none;
+	text-decoration: none;
+}
+
+button {
+	background: none;
+	border: none;
+	color: inherit;
+	cursor: pointer;
+	outline: none;
+	z-index: 2;
+}
+
+.content {
+	@extend %cover;
+}

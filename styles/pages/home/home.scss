@@ -1,0 +1,17 @@
+@use '../../utils/mixins';
+
+.home {
+	@extend %cover;
+	@extend %center;
+	
+	display: flex;
+	text-align: center;
+}
+
+.home_wrapper {
+	
+}
+
+.home_title {
+	font-size: 20rem;
+}
